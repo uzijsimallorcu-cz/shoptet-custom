@@ -1,0 +1,432 @@
+/* Header barevnost */
+#header, .navigation-buttons a.toggle-window, .navigation-buttons a:hover.toggle-window, .languagesMenu__content, .header-bottom, .navigation-in {
+  background-color: #e2ded3;
+}
+
+.navigation-buttons a:hover.toggle-window {
+  color: #3a6fcb;
+}
+
+
+/* Úpravy header */
+#header .header-top .navigation-wrapper .site-name {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  order: 1;
+  padding: 0;
+  text-align: left;
+}
+
+#header .header-top .navigation-wrapper .navigation-buttons {
+  order: 2;
+}
+
+#header .header-top .navigation-wrapper .navigation-tools {
+  order: 3;
+  position: relative;
+  width: auto;
+  z-index: 9999;
+}
+
+#header .header-top .header-top-wrapper .site-name a img, #header .header-top .header-top-wrapper h1.site-name a img {
+  height: 60px;
+  padding-top: 10px;
+}
+
+
+/* Posunutí widgetu pro výběr jazyka */
+.languagesMenu .languagesMenu__box ul.languagesMenu__list, .navigation-tools .dropdown ul.dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+
+/* Úpravy footer */
+#footer, .footer-rows .rate-wrapper {
+  background-color: #e2ded3;
+}
+
+#footer h4 {
+  color: #3a6fcb;
+}
+
+
+/* Prostor obsahu článku */
+.id--4 #content, .id--8 #content, .type-post #content {
+  max-width: 100%;
+}
+
+.id--4.one-column-body #content, .id--8.one-column-body #content, .type-post.one-column-body #content {
+  margin: 0 5%;
+}
+
+
+/* Zaoblení obrázků */
+[itemprop="image"] {
+border-radius: 8px;
+}
+
+
+/* Překrytí náhledového obrázku blogu */
+@media (min-width:768px) {
+  .blog-wrapper .image+.text {
+    background: rgba(0,150,136,.55);
+  }
+  .blog-wrapper .image+.text:hover {
+    background: rgba(0,150,136,.75);
+  }
+}
+
+.blog-wrapper .news-item .read-article {
+  text-decoration: underline;
+}
+
+.blog-wrapper .news-item {
+  flex-basis: 50%; width: 50%; display: inline-flex;
+}
+
+.contact-box ul li>span:before, .ordering-process .co-box h4:before {
+  display: inline-block;
+}
+
+/* Banner střed HP */
+.banner-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.practical-info {
+  text-align: left;
+  background-image: url('/user/documents/upload/bannery/1.jpg');
+  background-color: #3a6fcb;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+}
+
+.practical-info h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.practical-info ul {
+  list-style: none;
+  padding: 0;
+  color: #ffffff;
+}
+
+.practical-info ul li {
+  margin: 10px 0; /* Větší odsazení mezi položkami */
+  color: #ffffff;
+}
+
+.practical-info ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px; /* Zvýraznění textu */
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media (min-width: 768px) {
+  .guides {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+.column.guides {
+  max-width: 300px;
+}
+
+.guide {
+  position: relative; /* Umožňuje absolutní pozicování textu */
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.guide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.guide span {
+  position: absolute;
+  bottom: 10px; /* 10 px nad spodním okrajem obrázku */
+  left: 50%; /* Horizontální zarovnání na střed */
+  transform: translateX(-50%); /* Posun do přesného středu */
+  background-color: rgba(0, 0, 0, 0.6); /* Poloprůhledné pozadí pro čitelnost */
+  color: #fff;
+  padding: 5px 10px; /* Odsazení kolem textu */
+  border-radius: 3px; /* Zaoblené rohy */
+  font-size: 14px;
+}
+
+.weather iframe {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .banner-top {
+    grid-template-columns: 1fr 1fr;
+  }
+  .guides {
+    grid-template-columns: 1fr;
+  }
+  .guide {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .welcome-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  #header {
+    height: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .news-item {
+    max-width: 45% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-top {
+    grid-template-columns: 1fr;
+  }
+
+  .guides {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+
+/* PRVKY ČLÁNKŮ */
+/* CTA s odkazem */
+.button {
+  padding: 10px;
+  background-color: #3a6fcb;
+  border-radius: 5px;
+}
+
+.news-item-detail .text .anotace {
+  display: none;
+}
+
+.content-wrapper {
+  width: 90%; /* Šířka obsahu článku */
+}
+
+/* Původní prvky - nahradit */
+.clanek-full {width: 100%; display: block; float: left;}
+.clanek-full a {color: #3a6fcb;}
+.clanek-half-left {width: 50%; float: left;}
+.clanek-half-left a {color: #3a6fcb;}
+.clanek-half-right {width: 50%; float: right;}
+.clanek-half-right a {color: #3a6fcb;}
+.vodorovny-seznam {display: flex; flex-wrap: wrap; justify-content: space-between; align-items: auto; width: 100%;}
+.vodorovny-seznam a {color: #3a6fcb;}
+.polozka-seznamu-2 {flex-wrap: wrap; justify-content: space-between; text-align: center; padding: 0 25px; width: 50%;}
+.polozka-seznamu-3 {flex-wrap: wrap; justify-content: space-between; text-align: center; padding: 0 25px; width: 33%;}
+.polozka-seznamu-3 a, .polozka-seznamu-5, {color: #3a6fcb;}
+.polozka-seznamu-4 {flex-wrap: wrap; justify-content: space-between; text-align: center; padding: 0 25px; width: 25%;}
+.polozka-seznamu-5 { flex-wrap: wrap; justify-content: space-between; text-align: center; padding: 0 10px; width: 20%;}
+@media screen and (max-width: 768px) {
+  .polozka-seznamu-3, .polozka-seznamu-5 {flex-wrap: wrap; justify-content: center; text-align: center; padding: 10px 0; width: 100%;}
+  .half-mobil {padding: 10px 0; width: 100%;}}
+
+/* Nové prvky */
+.rubrics {
+  margin-bottom: 20px !important;
+}
+
+.rubrics a {
+  color: #ffffff;
+}
+
+.quote {
+  width: 80%;
+  padding: 10px;
+  background-color: #e2ded3;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.quote .autor {
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+
+/* Nastavení slouců v článku */
+.article-column {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem; /* mezera mezi sloupci */
+  margin-bottom: 2rem;
+}
+.article-column a {
+  color: #3a6fcb;
+}
+.article-column.two, .article-column.three, .article-column.four, .article-column.five {
+  display: flex !important;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.article-column .col {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+/* 2 sloupce */
+.article-column.two .col {
+  width: calc(50% - 0.5rem);
+}
+/* 3 sloupce */
+.article-column.three .col {
+  width: calc(33.333% - 0.666rem);
+}
+/* 4 sloupce */
+.article-article-column.four .col {
+  width: calc(25% - 0.75rem);
+}
+/* 5 sloupců */
+.article-column.five .col {
+  width: calc(20% - 0.8rem);
+}
+/* Responsivní rozpad na sloupce pod sebe na mobilech */
+@media (max-width: 768px) {
+  .article-column .col {
+    width: 100% !important;
+  }
+}
+
+
+/*TABULKA POČASÍ*/
+.weather-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  }
+
+.weather-month {
+  padding: 10px;
+  text-align: left;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 10px;
+  }
+
+.highlight {
+  background-color: #B2C4DE !important;
+}
+
+.card {
+   border-left: 3px outset #3a6fcb;
+   background-color: #f9f9f9;
+   border-radius: 5px;"
+}
+
+/* F&Q - rozbalovací prvek */
+.flip {
+  padding: 5px;
+  text-align: left;
+  background-color: #B2C4DE;
+  border: solid 1px #3a6fcb;
+  border-bottom: 0px !important;
+  border-radius: 5px 5px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: help;
+}
+
+.panel {
+  padding: 5px;
+  text-align: left;
+  display: none;
+  background-color: #e2ded3;
+  border: solid 1px #3a6fcb;
+  border-top: 0px !important;
+  border-radius: 0 0 5px 5px;
+}
+
+
+/* OBSAH WIDGET */
+#toc-widget {
+  position: fixed;
+  top: 250px;
+  right: -250px; /* skrytý widget */
+  width: 250px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+#toc-widget.open {
+  right: 0;
+}
+
+#toc-toggle {
+  position: absolute;
+  left: -40px;
+  top: 150px;
+  height: 40px;
+  width: 150px;
+  background: #3a6fcb;
+  color: white;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#toc-content {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+#toc-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#toc-content li {
+  margin: 0.3rem 0;
+}
+
+#toc-content li.toc-h2 {
+  padding-left: 1rem;
+}
+
+#toc-content li.toc-h3 {
+  padding-left: 2rem;
+}
