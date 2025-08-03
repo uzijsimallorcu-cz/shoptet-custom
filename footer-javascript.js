@@ -49,3 +49,27 @@ $(document).ready(function() {
   });
   $('#toc-widget').show();
 });
+
+// ZVÝRAZĚNÍ AKTUÁLNÍHO MĚSÍCE – článek počasí
+$(document).ready(function () {
+  // Měsíce v češtině ve správném pořadí
+  const mesice = [
+    "Leden", "Únor", "Březen", "Duben", "Květen", "Červen",
+    "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"
+  ];
+
+  // Získání aktuálního měsíce (index 0–11)
+  const aktualniMesicIndex = new Date().getMonth();
+  const aktualniMesic = mesice[aktualniMesicIndex];
+
+  // Projdi každý .weather-month a hledej ten správný
+  $(".weather-month").each(function () {
+    const text = $(this).text();
+
+    if (text.includes(aktualniMesic)) {
+      // Odeber případné staré highlighty a nastav nový
+      $(".weather-month").removeClass("highlight");
+      $(this).addClass("highlight");
+    }
+  });
+});
