@@ -227,10 +227,6 @@ border-radius: 8px;
   border-radius: 5px;
 }
 
-.news-item-detail .text .anotace {
-  display: none;
-}
-
 .content-wrapper {
   width: 90%; /* Šířka obsahu článku */
 }
