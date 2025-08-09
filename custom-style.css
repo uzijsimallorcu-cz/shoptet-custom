@@ -301,7 +301,7 @@ border-radius: 8px;
   width: calc(33.333% - 0.666rem);
 }
 /* 4 sloupce */
-.article-article-column.four .col {
+.article-column.four .col {
   width: calc(25% - 0.75rem);
 }
 /* 5 sloupců */
