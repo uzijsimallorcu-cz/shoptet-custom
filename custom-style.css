@@ -316,6 +316,53 @@ border-radius: 8px;
 }
 
 
+/* SOUVISEJÍCÍ ČLÁNKY */
+.related-article,
+.related-article a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.related-article__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.related-article__title {
+  margin: 8px 0 0;
+  padding: 0;
+  color: #111;
+  line-height: 1.25;
+  font-weight: 700;
+  display: block;
+}
+
+.related-article:hover .related-article__title,
+.related-article a:hover .related-article__title,
+.related-article__title:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .related-article__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 150, 136, .75);
+    padding: 0 10px 10px;
+    color: #fff;
+    margin: 0;
+  }
+}
+
+
 /*TABULKA POČASÍ*/
 .weather-table {
   display: grid;
@@ -367,6 +414,9 @@ border-radius: 8px;
   border-radius: 0 0 5px 5px;
 }
 
+.panel a {
+  color: #3a6fcb;
+}
 
 /* OBSAH WIDGET */
 #toc-widget {
