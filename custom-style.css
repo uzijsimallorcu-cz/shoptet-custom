@@ -326,6 +326,8 @@ border-radius: 8px;
   overflow: hidden;
 }
 
+.related-article > a.related-article { display:block; }
+
 .related-article__img {
   display: block;
   width: 100%;
@@ -359,6 +361,11 @@ border-radius: 8px;
     padding: 0 10px 10px;
     color: #fff;
     margin: 0;
+    pointer-events: none;
+  }
+
+  .related-article:hover .related-article__title {
+    text-decoration:underline;
   }
 }
 
