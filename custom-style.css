@@ -34,6 +34,14 @@
   padding-top: 10px;
 }
 
+.top-nav-button-login {
+  background-color: #e2ded3;
+}
+
+.top-nav-button-login:hover {
+  background-color: #e2ded3;
+}
+
 
 /* Posunutí widgetu pro výběr jazyka */
 .languagesMenu .languagesMenu__box ul.languagesMenu__list, .navigation-tools .dropdown ul.dropdown-menu {
