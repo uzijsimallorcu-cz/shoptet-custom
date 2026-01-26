@@ -223,3 +223,73 @@ $(document).ready(function () {
     }
   });
 });
+
+// FOTOGALERIE JAKO SLIDER
+document.addEventListener('DOMContentLoaded', function () {
+  const wrap = document.querySelector('.plus-gallery-wrap');
+  if (!wrap) return;
+
+  const items = Array.from(wrap.querySelectorAll('.plus-gallery-item'));
+  if (items.length < 2) return;
+
+  const GAP = 10;
+  const ITEM_WIDTH = 200 + GAP;
+
+  // vytvoření tracku
+  const track = document.createElement('div');
+  track.className = 'gallery-track';
+
+  items.forEach(item => track.appendChild(item));
+  wrap.appendChild(track);
+
+  // šipky
+  const prev = document.createElement('button');
+  prev.className = 'plus-gallery-arrow prev';
+  prev.innerHTML = '‹';
+
+  const next = document.createElement('button');
+  next.className = 'plus-gallery-arrow next';
+  next.innerHTML = '›';
+
+  wrap.appendChild(prev);
+  wrap.appendChild(next);
+
+  // klony (nekonečný efekt)
+  const firstClone = items[0].cloneNode(true);
+  const lastClone = items[items.length - 1].cloneNode(true);
+
+  track.insertBefore(lastClone, track.firstChild);
+  track.appendChild(firstClone);
+
+  let index = 1;
+  track.style.transform = `translateX(-${ITEM_WIDTH}px)`;
+
+  function move() {
+    track.style.transition = 'transform 0.4s ease';
+    track.style.transform = `translateX(-${index * ITEM_WIDTH}px)`;
+  }
+
+  next.addEventListener('click', () => {
+    index++;
+    move();
+  });
+
+  prev.addEventListener('click', () => {
+    index--;
+    move();
+  });
+
+  track.addEventListener('transitionend', () => {
+    if (index === items.length + 1) {
+      track.style.transition = 'none';
+      index = 1;
+      track.style.transform = `translateX(-${ITEM_WIDTH}px)`;
+    }
+
+    if (index === 0) {
+      track.style.transition = 'none';
+      index = items.length;
+      track.style.transform = `translateX(-${items.length * ITEM_WIDTH}px)`;
+    }
+  });
+});
