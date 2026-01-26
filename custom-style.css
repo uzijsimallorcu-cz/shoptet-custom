@@ -575,3 +575,39 @@ border-radius: 8px;
 #toc-content li.toc-h3 {
   padding-left: 2rem;
 }
+
+/* === FOTOGALERIE JAKO SLIDER === */
+.plus-gallery-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.plus-gallery-wrap .gallery-track {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+/* pevná šířka náhledu */
+.plus-gallery-item {
+  flex: 0 0 200px;
+  width: 200px;
+}
+
+/* šipky */
+.plus-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.plus-gallery-arrow.prev { left: 10px; }
+.plus-gallery-arrow.next { right: 10px; }
