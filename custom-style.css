@@ -34,6 +34,14 @@
   padding-top: 10px;
 }
 
+.top-nav-button-login {
+  background-color: #e2ded3;
+}
+
+.top-nav-button-login:hover {
+  background-color: #e2ded3;
+}
+
 
 /* Posunutí widgetu pro výběr jazyka */
 .languagesMenu .languagesMenu__box ul.languagesMenu__list, .navigation-tools .dropdown ul.dropdown-menu {
@@ -107,7 +115,7 @@ border-radius: 8px;
 
 .practical-info {
   text-align: left;
-  background-image: url('/user/documents/upload/bannery/1.jpg');
+  background-image: url('https://www.uzijsimallorcu.cz/user/documents/upload/bannery/1.jpg');
   background-color: #3a6fcb;
   background-size: cover;
   background-repeat: no-repeat;
@@ -227,10 +235,6 @@ border-radius: 8px;
   border-radius: 5px;
 }
 
-.news-item-detail .text .anotace {
-  display: none;
-}
-
 .content-wrapper {
   width: 90%; /* Šířka obsahu článku */
 }
@@ -268,13 +272,17 @@ border-radius: 8px;
   background-color: #e2ded3;
   border-radius: 10px;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 24px !important;
 }
 
 .quote .autor {
   text-align: right;
   font-size: 12px;
   margin-bottom: 0px;
+}
+
+.quote > p {
+  margin-bottom: 0px !important;
 }
 
 /* Nastavení slouců v článku */
@@ -305,7 +313,7 @@ border-radius: 8px;
   width: calc(33.333% - 0.666rem);
 }
 /* 4 sloupce */
-.article-article-column.four .col {
+.article-column.four .col {
   width: calc(25% - 0.75rem);
 }
 /* 5 sloupců */
@@ -317,6 +325,140 @@ border-radius: 8px;
   .article-column .col {
     width: 100% !important;
   }
+}
+
+
+/* SOUVISEJÍCÍ ČLÁNKY */
+.related-article,
+.related-article a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.related-article > a.related-article { display:block; }
+
+.related-article__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.related-article__title {
+  margin: 8px 0 0;
+  padding: 0;
+  color: #111;
+  line-height: 1.25;
+  font-weight: 700;
+  display: block;
+}
+
+.related-article:hover .related-article__title,
+.related-article a:hover .related-article__title,
+.related-article__title:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .related-article__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 150, 136, .75);
+    padding: 0 10px 10px;
+    color: #fff;
+    margin: 0;
+    pointer-events: none;
+  }
+
+  .related-article:hover .related-article__title {
+    text-decoration:underline;
+  }
+}
+
+
+/* SLIDER PRODUKTŮ DO ČLÁNKU --- */
+.article-slider { position: relative; margin-top: 1rem; }
+.article-slider__viewport { overflow: hidden; position: relative; }
+.article-slider__track {
+  display: flex;
+  gap: 0.75rem;
+  will-change: transform;
+  transition: transform 350ms ease;
+}
+
+.article-product {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  border: 1px solid #e2ded3;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow:
+    -6px 0 12px rgba(0,0,0,.06),
+     0 8px 14px rgba(0,0,0,.08);
+  padding: 14px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.article-product__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.article-product__title { margin: 12px 0 16px; font-weight: 700; }
+.article-product__title a { color: inherit; text-decoration: none; }
+.article-product__desc { margin: 0 0 16px; }
+.article-product__price { margin: 0 0 16px; font-weight: 600; }
+
+.article-product:hover .article-product__title a { text-decoration: underline; }
+.article-product__cta {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid #B2C4DE;
+}
+.article-product__cta:hover {
+  background: #B2C4DE;
+  color: #fff;
+}
+
+.article-slider__nav {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #e2ded3;
+  background: #e2ded3;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+.article-slider__nav:after { content: attr(data-icon); font-size: 18px; }
+
+@media (max-width: 767px) {
+  .article-slider__nav--prev { left: 6px; }
+  .article-slider__nav--next { right: 6px; }
+}
+
+@media (min-width: 768px) {
+  .article-product { min-width: 250px; }
 }
 
 
@@ -371,6 +513,9 @@ border-radius: 8px;
   border-radius: 0 0 5px 5px;
 }
 
+.panel a {
+  color: #3a6fcb;
+}
 
 /* OBSAH WIDGET */
 #toc-widget {
@@ -430,3 +575,39 @@ border-radius: 8px;
 #toc-content li.toc-h3 {
   padding-left: 2rem;
 }
+
+/* === FOTOGALERIE JAKO SLIDER === */
+.plus-gallery-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.plus-gallery-wrap .gallery-track {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+/* pevná šířka náhledu */
+.plus-gallery-item {
+  flex: 0 0 200px;
+  width: 200px;
+}
+
+/* šipky */
+.plus-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.plus-gallery-arrow.prev { left: 10px; }
+.plus-gallery-arrow.next { right: 10px; }
