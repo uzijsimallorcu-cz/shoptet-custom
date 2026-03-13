@@ -91,3 +91,22 @@ Doporučený další krok je transformační skript `Freelo JSON -> ClickUp CSV/
 - comments -> task comments
 - files -> attachments
 - notes -> docs/comments podle cílové struktury
+
+
+## Proč složka nemusí být vidět na GitHubu
+V tomto prostředí nebyl nastaven žádný `origin` remote ani upstream branch, takže commit zůstane pouze lokálně, dokud ho explicitně nepushneš do svého GitHub repozitáře.
+
+Zkontroluj remote a pushni branch:
+```bash
+git remote -v
+git branch --show-current
+git push -u origin $(git branch --show-current)
+```
+
+Pokud remote `origin` ještě neexistuje, přidej ho:
+```bash
+git remote add origin git@github.com:<tvuj-ucet>/freelo-api-test.git
+# nebo HTTPS varianta:
+# git remote add origin https://github.com/<tvuj-ucet>/freelo-api-test.git
+git push -u origin $(git branch --show-current)
+```
