@@ -1,0 +1,62 @@
+{
+  "projects": {
+    "path": "/projects",
+    "method": "GET",
+    "project_scoped": false,
+    "params": {}
+  },
+  "labels": {
+    "path": "/labels",
+    "method": "GET",
+    "project_scoped": false,
+    "params": {}
+  },
+  "pinned_items": {
+    "path": "/pinned-items",
+    "method": "GET",
+    "project_scoped": false,
+    "params": {}
+  },
+  "tasklists": {
+    "path": "/projects/{project_id}/tasklists",
+    "method": "GET",
+    "project_scoped": true,
+    "params": {}
+  },
+  "tasks": {
+    "path": "/projects/{project_id}/tasks",
+    "method": "GET",
+    "project_scoped": true,
+    "params": {}
+  },
+  "subtasks": {
+    "path": "/projects/{project_id}/subtasks",
+    "method": "GET",
+    "project_scoped": true,
+    "params": {}
+  },
+  "comments": {
+    "path": "/projects/{project_id}/comments",
+    "method": "GET",
+    "project_scoped": true,
+    "params": {}
+  },
+  "users": {
+    "path": "/users",
+    "method": "GET",
+    "project_scoped": false,
+    "params": {}
+  },
+  "files": {
+    "path": "/projects/{project_id}/files",
+    "method": "GET",
+    "project_scoped": true,
+    "params": {}
+  },
+  "notes": {
+    "path": "/projects/{project_id}/notes",
+    "method": "GET",
+    "project_scoped": true,
+    "params": {}
+  }
+}
